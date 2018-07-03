@@ -1,0 +1,16 @@
+GET http://localhost:5001/api/Books
+
+GET http://localhost:5001/api/Books/1
+
+POST http://localhost:5001/api/Books
+Content-Type: application/json
+
+{
+  "Title": "3",
+  "Description": "dsadsad",
+  "CreationDate": "2018-01-01T00:00:00",
+  "Author":{
+      "Name":"Krystian",
+      "Surname":"Kolad"
+  }
+}
