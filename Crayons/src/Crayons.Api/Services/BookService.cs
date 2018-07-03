@@ -18,11 +18,6 @@ namespace Crayons.Api.Services
             _bookRepository.Add(book);
         }
 
-        public void Delete(int id)
-        {
-            _bookRepository.Delete(id);
-        }
-
         public IList<Book> GetAll()
         {
             return _bookRepository.GetAll();
@@ -31,11 +26,6 @@ namespace Crayons.Api.Services
         public Book GetById(int id)
         {
             return _bookRepository.GetById(id);
-        }
-
-        public void Update(Book book)
-        {
-            _bookRepository.Update(book);
         }
     }
 }

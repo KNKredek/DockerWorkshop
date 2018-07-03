@@ -32,20 +32,5 @@ namespace Crayons.Api.Controllers
             _bookService.Add(book);
             return Ok();
         }
-
-        [HttpPut]
-        public IActionResult Put([FromBody]Book book)
-        {
-            _bookService.Update(book);
-            return Ok();
-        }
-
-        [HttpDelete]
-        [Route("{id}")]
-        public IActionResult Delete(int id)
-        {
-            _bookService.Delete(id);
-            return Ok();
-        }
     }
 }

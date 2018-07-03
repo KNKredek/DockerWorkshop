@@ -19,12 +19,6 @@ namespace Crayons.Api.Domain.Repositories
             _context.SaveChanges();
         }
 
-        public virtual void Delete(int id)
-        {
-            _context.Set<T>().Remove(_context.Set<T>().Where(x=>x.Id.Equals(id)).First());
-            _context.SaveChanges();
-        }
-
         public virtual IList<T> GetAll()
         {
             return _context.Set<T>().ToList();
@@ -33,12 +27,6 @@ namespace Crayons.Api.Domain.Repositories
         public virtual T GetById(int id)
         {
             return _context.Set<T>().Where(x=>x.Id.Equals(id)).FirstOrDefault();
-        }
-
-        public virtual void Update(T entity)
-        {
-            _context.Set<T>().Update(entity);
-            _context.SaveChanges();
         }
     }
 }
