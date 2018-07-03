@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,17 +10,17 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Crayons.Web.Pages
 {
-    public class IndexModel : PageModel
+    public class DetailsModel : PageModel
     {
         private IApiService _service;
-        public IList<Book> Books { get; set; }
-        public IndexModel(IApiService service)
+        public Book Book { get; set; }
+        public DetailsModel(IApiService service)
         {
             _service = service;
         }
-        public async Task OnGetAsync()
+        public async Task OnGet(int id)
         {
-            Books = await _service.Get<IList<Book>>(ApiConsts.Books);
+            Book = await _service.Get<Book>($"{ApiConsts.Books}/{id}");
         }
     }
 }

@@ -1,0 +1,22 @@
+﻿@page
+@model DetailsModel
+@{
+}
+
+<label>
+    Nazwa : @Model.Book.Title
+</label>
+<br>
+<label>
+    Opis : @Model.Book.Description
+</label>
+<br>
+<label>
+    Data Wydania: @Model.Book.CreationDate
+</label>
+<br>
+<label>
+    Autor: <br>
+    @Model.Book.Author.Name <br>
+    @Model.Book.Author.Surname <br>
+</label>

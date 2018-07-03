@@ -1,0 +1,13 @@
+﻿@page
+@model AddModel
+@{
+}
+
+<form method="POST">
+    <div>Name: <input asp-for="Book.Title" /></div>
+    <div>Description: <input asp-for="Book.Description" /></div>
+    <div>Data wydania: <input asp-for="Book.CreationDate" /></div>
+    <div>Imię autora: <input asp-for="Book.Author.Name" /></div>
+    <div>Nazwisko autora: <input asp-for="Book.Author.Surname" /></div>
+    <input type="submit" />
+</form>
